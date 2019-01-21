@@ -14,6 +14,7 @@ RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src/main /code/src/main
-RUN ["mvn", "package"]
+#RUN ["mvn", "package"]
+RUN ["mvn", "clean", "install"]
 
 CMD ["java", "-jar", "target/springbootapp-0.0.1-SNAPSHOT.jar"]
