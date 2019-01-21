@@ -10,7 +10,7 @@ WORKDIR /code
 
 ADD pom.xml /code/pom.xml
 RUN ["mvn", "dependency:resolve"]
-RUN ["mvn", "verify"]
+# RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src/main /code/src/main
